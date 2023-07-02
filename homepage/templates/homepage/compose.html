@@ -1,0 +1,138 @@
+{% extends 'base_layout.html' %} {% block content %}
+<body
+  onmousedown="WhichButtonCompose(event)"
+  style="margin: 0; padding: 0; background-color: #e90064"
+>
+  <div class="content" style="margin-top: 40px">
+    <h1
+      style="
+        font-weight: normal;
+        font-family: 'Raleway', sans-serif;
+        margin: 0 auto;
+        margin-top: 30px;
+        width: 500px;
+        color: black;
+        font-size: 3em;
+        text-align: center;
+      "
+    >
+      COMPOSE MAIL
+    </h1>
+    <div style="margin-top: 25px">
+      <form id="here">
+        <script>
+          $(document).ready(function () {
+            setInterval(function () {
+              $("#here").load(window.location.href + " #here");
+            }, 1000);
+          });
+        </script>
+        {% csrf_token %}
+        <b
+          ><label
+            style="
+              background-repeat: no-repeat;
+              background-position: right bottom;
+              background-size: 10.5%;
+              transition: background-image 0.7s;
+              -webkit-transition: background-image 0.7s;
+              -moz-transition: background-image 0.7s;
+              -o-transition: background-image 0.7s;
+              width: 566px;
+              padding-top: 2px;
+            "
+            >RECIPIENT'S EMAIL ID :
+          </label></b
+        ><br />
+        <input
+          id="email"
+          type="text"
+          style="width: 100%; height: 50px; border-radius: 5px"
+          placeholder="Enter Email"
+          required
+          value="{{compose.recipient}}"
+        />
+        <br /><br />
+
+        <b
+          ><label
+            style="
+              background-repeat: no-repeat;
+              background-position: right bottom;
+              background-size: 10.5%;
+              transition: background-image 0.7s;
+              -webkit-transition: background-image 0.7s;
+              -moz-transition: background-image 0.7s;
+              -o-transition: background-image 0.7s;
+              width: 566px;
+              padding-top: 2px;
+            "
+            >SUBJECT :
+          </label></b
+        ><br />
+        <input
+          id="subject"
+          type="text"
+          style="width: 100%; height: 50px; border-radius: 5px"
+          placeholder="Enter Subject"
+          required
+          value="{{compose.subject}}"
+        />
+        <br /><br />
+
+        <b
+          ><label
+            style="
+              background-repeat: no-repeat;
+              background-position: right bottom;
+              background-size: 10.5%;
+              transition: background-image 0.7s;
+              -webkit-transition: background-image 0.7s;
+              -moz-transition: background-image 0.7s;
+              -o-transition: background-image 0.7s;
+              width: 566px;
+              padding-top: 2px;
+            "
+            >BODY :
+          </label></b
+        ><br />
+        <input
+          id="body"
+          rows="5"
+          style="width: 100%; height: 200px; border-radius: 5px"
+          placeholder="Type Message"
+          required
+          value="{{compose.body}}"
+        />
+        <br />
+
+        <button
+          class="btn btn-primary btn-xl rounded-pill mt-5"
+          type="button"
+          onclick="sendEmail()"
+          style="background-color: black; display: block; margin: auto"
+        >
+          SEND MAIL
+        </button>
+      </form>
+      <br />
+    </div>
+  </div>
+</body>
+<script>
+  function WhichButtonCompose(event) {
+    $.ajax({
+      url: "{% url 'homepage:compose' %}",
+      method: "POST",
+      data: { csrfmiddlewaretoken: "{{ csrf_token }}" },
+      success: function (data) {
+        if (data.result == "success") {
+          window.location = "{% url 'homepage:options' %}";
+        } else if (data.result == "failure") {
+          window.location = "{% url 'homepage:compose' %}";
+        }
+      },
+    });
+  }
+</script>
+{% endblock %}

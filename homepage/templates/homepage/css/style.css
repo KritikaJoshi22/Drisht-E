@@ -1,0 +1,357 @@
+/*--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #8d9eff;
+}
+.content {
+  width: 35%;
+  margin-top: 7%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  position: relative;
+}
+.content h1 {
+  color: #434242;
+  font-size: 35px;
+  font-family: "Oswald", sans-serif;
+}
+.content p {
+  font-size: 20px;
+  color: #f3efe0;
+  font-family: "Lobster", cursive;
+  line-height: 25px;
+}
+input[type="email"] {
+  padding: 10px;
+  width: 66%;
+  background-color: #f3efe0;
+  border: 2px solid #f3efe0;
+  color: #434242;
+  margin-top: 7%;
+  text-align: center;
+  outline: none;
+  font-size: 20px;
+  border-radius: 26px;
+  font-family: "Oswald", sans-serif;
+}
+input[type="password"] {
+  padding: 10px;
+  width: 66%;
+  background-color: #f3efe0;
+  border: 2px solid #f3efe0;
+  color: #434242;
+  margin-top: 40px;
+  text-align: center;
+  border-radius: 26px;
+  outline: none;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+}
+
+input[type="submit"] {
+  background-color: #434242;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #f3efe0;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  top: 107%;
+  left: 35%;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transition: all 0.5s ease-in-out;
+}
+.Navbar {
+  width: 10%;
+  margin-left: 2%;
+  margin-right: auto;
+  text-align: center;
+  position: relative;
+}
+.Navbar h1 {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-family: "Helvetica", sans-serif;
+}
+
+input[type="submit"] :hover,
+input[type="submit"] :focus {
+  background-color: #f082ac;
+  transition: all 0.5s ease-in-out;
+}
+input[type="submit"] {
+  padding: 10px;
+  background-color: #434242;
+  width: 150px;
+  border: none;
+  cursor: pointer;
+  color: #f3efe0;
+  font-weight: bold;
+  font-size: 20px;
+  top: 107%;
+  left: 35%;
+  font-family: "Oswald", sans-serif;
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+}
+input[type="submit"]:hover {
+  background-color: #e74c3c;
+  color: #f3efe0;
+  transition: all 0.5s ease-in-out;
+}
+
+a:active {
+  color: #f3efe0;
+  text-decoration: none;
+}
+a:hover {
+  color: #e74c3c;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+.footer {
+  margin-top: 11%;
+  text-align: center;
+}
+.footer p {
+  font-weight: bold;
+  color: white;
+  font-size: 15px;
+  font-family: "Oswald", sans-serif;
+  line-height: 25px;
+}
+
+/*-- responsive-mediaquries --*/
+@media (max-width: 1920px) {
+  .content {
+    margin-top: 8%;
+  }
+  input[type="submit"] {
+    left: 39%;
+  }
+}
+
+@media (max-width: 1680px) {
+  .content {
+    margin-top: 9%;
+  }
+  input[type="submit"] {
+    left: 37%;
+  }
+}
+
+@media (max-width: 1440px) {
+  input[type="submit"] {
+    left: 35%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .content {
+    width: 40%;
+  }
+  input[type="submit"] {
+    left: 35%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content {
+    width: 50%;
+  }
+  input[type="submit"] {
+    left: 35.5%;
+  }
+  .footer {
+    margin-top: 13%;
+  }
+}
+
+@media (max-width: 800px) {
+  .content {
+    width: 60%;
+  }
+  input[type="submit"] {
+    left: 34%;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    width: 70%;
+    margin-top: 24%;
+  }
+  input[type="submit"] {
+    top: 110%;
+    left: 36%;
+  }
+  .footer {
+    margin-top: 30%;
+  }
+}
+
+@media (max-width: 736px) {
+  .content {
+    width: 80%;
+    margin-top: 1%;
+  }
+  input[type="email"] {
+    margin-top: 2%;
+  }
+  input[type="submit"] {
+    left: 37%;
+  }
+  .footer {
+    margin-top: 15%;
+  }
+}
+
+@media (max-width: 667px) {
+  .content {
+    margin-top: 1%;
+    width: 80%;
+  }
+  input[type="email"] {
+    margin-top: 3%;
+    width: 70%;
+  }
+  input[type="password"] {
+    width: 70%;
+  }
+  .footer {
+    margin-top: 15%;
+  }
+}
+
+@media (max-width: 640px) {
+  input[type="submit"] {
+    width: 40%;
+  }
+  input[type="password"] {
+    width: 80%;
+  }
+  input[type="email"] {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  input[type="submit"] {
+    left: 31%;
+  }
+  .footer {
+    margin-top: 19%;
+  }
+}
+
+@media (max-width: 568px) {
+  .content {
+    margin-top: 1%;
+    width: 75%;
+  }
+  .content p {
+    font-size: 17px;
+  }
+  input[type="email"] {
+    margin-top: 1%;
+  }
+  input[type="submit"] {
+    top: 110%;
+    left: 31%;
+  }
+  .footer {
+    margin-top: 17%;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    width: 75%;
+  }
+}
+
+@media (max-width: 414px) {
+  .content {
+    width: 90%;
+    margin-top: 17%;
+  }
+  .content p {
+    font-size: 20px;
+    margin-top: 10%;
+  }
+  input[type="email"] {
+    margin-top: 9%;
+  }
+  .footer {
+    margin-top: 42%;
+  }
+  .footer p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 384px) {
+  .content {
+    margin-top: 10%;
+  }
+}
+
+@media (max-width: 375px) {
+  .content {
+    width: 90%;
+    margin-top: 14%;
+  }
+  input[type="email"] {
+    margin-top: 8%;
+  }
+  .footer {
+    margin-top: 36%;
+  }
+  .footer p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .content {
+    width: 95%;
+    margin-top: 1%;
+  }
+  input[type="email"] {
+    width: 80%;
+    margin-top: 4%;
+  }
+  input[type="password"] {
+    width: 80%;
+  }
+  input[type="submit"] {
+    left: 31%;
+  }
+  .content p {
+    font-size: 17px;
+  }
+}

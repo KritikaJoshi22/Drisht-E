@@ -1,0 +1,93 @@
+{% extends 'base_layout.html' %} {% block content %}
+<body
+  onmousedown="SendPostRequestHome(event)"
+  style="background-color: #8d9eff"
+>
+  <nav
+    class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom"
+  >
+    <div class="container">
+      <a class="navbar-brand" style="font-size: 150%">Drisht-E</a>
+    </div>
+  </nav>
+  <header class="masthead text-center text-white">
+    <div class="masthead-content">
+      <div class="container">
+        <h1 style="margin-top: -60px; font-size: 60px; color: black">
+          WELCOME
+        </h1>
+
+        <form action="homepage/login.html" method="POST">
+          <br /><br /><br /><br />
+          <div class="container">
+            <div class="login" id="here">
+              <script>
+                $(document).ready(function () {
+                  setInterval(function () {
+                    $("#here").load(window.location.href + " #here");
+                  }, 1000);
+                });
+              </script>
+
+              {% csrf_token %}
+              <h3 style="color: black; text-align: left; margin-left: 10%">
+                Email:
+              </h3>
+
+              <input
+                type="text"
+                placeholder="Email"
+                name="email"
+                required
+                value="{{ detail.email }}"
+              />
+
+              <br /><br />
+              <h3 style="color: black; text-align: left; margin-left: 10%">
+                Password:
+              </h3>
+              <input
+                type="password"
+                placeholder="Password"
+                name="password"
+                required
+                value="{{ detail.password }}"
+              />
+
+              <button
+                type="submit"
+                class="btn btn-primary btn-xl rounded-pill mt-5"
+                style="background-color: black"
+              >
+                LOGIN
+              </button>
+              <br />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <script>
+    function SendPostRequestHome(event) {
+      $.ajax({
+        url: "{% url 'homepage:login' %}",
+        method: "POST",
+        data: {
+          csrfmiddlewaretoken: "{{ csrf_token }}",
+        },
+        success: function (data) {
+          if (data.result == "success") {
+            window.location = "{% url 'homepage:options' %}";
+          } else if (data.result == "failure") {
+            window.location = "{% url 'homepage:login' %}";
+          }
+        },
+      });
+    }
+  </script>
+
+  
+  {% endblock %}
+</body>
