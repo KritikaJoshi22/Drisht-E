@@ -1,2 +1,2 @@
 # Drisht-E
-A Voice based email system for the visually challenged
+A Voice-based email system for the visually challenged.
