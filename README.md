@@ -1,5 +1,5 @@
 # Drisht-E
-A Voice-based email system for the visually challenged.
+A Voice-based email system for the visually challenged.<br/>
 
 ## ABSTRACT : 
 <p align="justify">Email has become an essential means of communication for people worldwide, facilitating the exchange of confidential and time-sensitive information. However, the visually impaired community, consisting of approximately 253 million individuals globally, faces significant communication barriers. As technology continues to advance, these individuals often feel further marginalized and disadvantaged.</p>
